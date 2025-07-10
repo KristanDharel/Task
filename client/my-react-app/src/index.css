@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+@keyframes enterFromBottom {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes leaveToBottom {
+  from {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+}
+
+.animate-enter-from-bottom {
+  animation: enterFromBottom 0.3s ease-out forwards;
+}
+
+.animate-leave-to-bottom {
+  animation: leaveToBottom 0.3s ease-in forwards;
+}
